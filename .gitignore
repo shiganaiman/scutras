@@ -1,0 +1,10 @@
+*.swp
+Thumbs.db
+/src/.project
+/src/.classpath
+/src/.settings
+/src/eclipse
+/src/tmp
+/src/test-result
+/src/precompiled
+
