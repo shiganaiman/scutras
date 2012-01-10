@@ -1,2 +1,9 @@
 README
 よくよんでね
+
+
+動かし方
+1. とってくる
+2. src 内で play dependencies
+3. src 内で play run
+
