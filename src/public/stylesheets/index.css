@@ -1,0 +1,13 @@
+
+div.page {
+	width: 800px;
+	margin: 0 auto;
+}
+h1 {
+	text-align: center;
+}
+textarea.memo {
+	width: 100%;
+	height: 300px;
+}
+
