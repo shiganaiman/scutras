@@ -4,7 +4,9 @@ Thumbs.db
 /src/.classpath
 /src/.settings
 /src/eclipse
+/src/logs
+/src/project/project
+/src/project/target
+/src/target
 /src/tmp
-/src/test-result
-/src/modules
 
