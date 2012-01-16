@@ -6,10 +6,23 @@
 } {
   <div class="page">
   <h1>テキストテスト</h1>
-  <form action="javascript:" class="content-form" id="memo-form">
+  <table class="content-table">
+  <tr><td>
+  <form action="javascript:" class="content-form" id="memo-form-1">
   <div class="form-content">
-	  <p><textarea name="memo" class="memo"></textarea></p>
+  <p><textarea name="memo" class="memo"></textarea></p>
+  <p><input type="submit"  class="submit-button"value="送信 (1)" /></p>
   </div>
   </form>
+  </td><td>
+  <form action="javascript:" class="content-form" id="memo-form-2">
+  <div class="form-content">
+  <p><textarea name="memo" class="memo"></textarea></p>
+  <p><input type="submit" class="submit-button" value="送信 (2)" /></p>
+  </div>
+  </form>
+  </td></tr>
+  </table>
+  <p class="button-content"><button class="submit-button">同時送信</button></p>
   </div>
 }

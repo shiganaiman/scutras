@@ -1,5 +1,5 @@
 
 $(function() {
-	$(".memo").focus();
+	$("#memo-form-1 .memo").focus();
 });
 
