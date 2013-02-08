@@ -1,7 +1,8 @@
 .classpath
 .project
 project.properties
-bin/
 target/
-.idea/
-.idea_modules/
+.target/
+.cache
+.settings/
+logs/
