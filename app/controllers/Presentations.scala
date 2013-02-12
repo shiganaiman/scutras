@@ -6,7 +6,7 @@ import play.api.mvc.Controller
 object Presentations extends Controller {
   
   def list = Action {
-    Ok(views.html.index("a presentation."));
+    Ok(views.html.presentation.index("a presentation."));
   }
 
   def index(id:Long) = TODO

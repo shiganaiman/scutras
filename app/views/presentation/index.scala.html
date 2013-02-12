@@ -37,16 +37,8 @@
 
 </div>
 <!--/.fluid-container-->
-
-<script
-	src="http://d1n0x3qji82z53.cloudfront.net/src-min-noconflict/ace.js"
-	type="text/javascript" charset="utf-8"></script>
-<script>
-	var editor = ace.edit("editor");
-	editor.setTheme("ace/theme/monokai");
-	editor.getSession().setMode("ace/mode/javascript");
-	editor.setReadOnly(true);
-</script>
+<!-- JavaScript -->
+@helper.requireJs(core = routes.Assets.at("javascripts/require.js").url, module = routes.Assets.at("javascripts/presentation/index").url)
     
 }
 
