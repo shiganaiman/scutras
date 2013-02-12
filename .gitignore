@@ -1,8 +1,13 @@
+logs
+project/project
+project/target
+target
+tmp
+dist
+.cache
 .classpath
 .project
 project.properties
-target/
-.target/
-.cache
 .settings/
-logs/
+bin
+.target/
