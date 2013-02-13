@@ -1,4 +1,5 @@
-@(title: String)(content: Html)
+@(title: String)(content: Html)(js: String = "")
+
 
 <!DOCTYPE html>
 
@@ -42,7 +43,6 @@
 				</div>
 			</div>
 		</div>
-		<script src="@routes.Assets.at("javascripts/main.js")"></script>
 		@content
 		<!--/row-->
 		<hr>
@@ -54,6 +54,8 @@
 		<!--[if lt IE 9]>
 			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
+		<script src="@routes.Assets.at("javascripts/main.js")"></script>
+		@helper.requireJs(core = routes.Assets.at("javascripts/require.js").url, module = routes.Assets.at(js).url)
 	</body>
     <body>
     </body>

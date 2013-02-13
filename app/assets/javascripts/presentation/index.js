@@ -1,10 +1,12 @@
 (function (r) {
 	requirejs.config(r);
-	require(["ace"],function(l) {
+	require(["jquery", "underscore", "backbone", "ace", "presentation/models", "presentation/views"],function($, _, backbone, ace, models, views) {
 		var editor = ace.edit("editor");
 		editor.setTheme("ace/theme/monokai");
 		editor.getSession().setMode("ace/mode/javascript");
-		editor.setReadOnly(true);
+		editor.setReadOnly(false);
 	});
 }(myGlobalRequire));
+
+
 
