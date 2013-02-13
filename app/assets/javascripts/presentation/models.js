@@ -1,6 +1,7 @@
 (function (r) {
-	define(["underscore", "backbone"], function($, _, backbone) {
-		var Task = Backbone.Model.extend({
+	requirejs.config(r);
+	define(["underscore", "backbone"], function( _, backbone) {
+		var Task = backbone.Model.extend({
 	         // 初期値を指定。
 	         // new でオブジェクトを生成したとき、まずこの値が attributes に格納される。
 	         defaults: {
