@@ -61,4 +61,4 @@
 			"TaskList" : TaskList
 		};
 	});
-}(myGlobalRequire));
+}(scutras.require.config));

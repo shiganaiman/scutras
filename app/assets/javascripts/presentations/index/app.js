@@ -7,7 +7,7 @@
 		editor.getSession().setMode("ace/mode/javascript");
 		editor.setReadOnly(false);
 	});
-}(myGlobalRequire));
+}(scutras.require.config));
 
 
 

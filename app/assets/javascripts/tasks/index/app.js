@@ -4,7 +4,4 @@
 	function($, _, backbone, models, views) {
 		window.App = new views.TaskListView({ model: new models.TaskList() });
 	});
-}(myGlobalRequire));
-
-
-
+}(scutras.require.config));

@@ -132,4 +132,4 @@
 			"TaskListView" : TaskListView
 		};
 	});
-}(myGlobalRequire));
+}(scutras.require.config));

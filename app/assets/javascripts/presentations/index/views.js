@@ -2,7 +2,7 @@
 	requirejs.config(r);
 	define(["jquery", "underscore", "backbone", "ace", "presentations/models"], function($, _, backbone, ace, models) {
 	});
-}(myGlobalRequire));
+}(scutras.require.config));
 
 
 
