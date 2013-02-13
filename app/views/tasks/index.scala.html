@@ -1,0 +1,38 @@
+@* <meta charset="UTF-8"/> *@
+@(message: String)
+
+@main("Welcome to SCUTRAS") {
+    
+  <h1>Backbone Todo</h1>
+  <div id="main">
+      <div id="task-list">
+          <!-- ここにタスクリストを表示する -->
+      </div>
+      <input id="name-input" type="text"/>
+      <input id="add-input" type="button" value="add"/>
+  </div>
+
+  <!--TaskView の描画に使うテンプレート-->
+  <script id="task-template" type="text/html">
+            <% if (isEditing) { %>
+                <input class="name-input" type="text" value="<%= name %>"/>
+                <input class="save-input" type="button" value="save"/>
+                <input class="cancel-input" type="button" value="cancel"/>
+                <input class="delete-input" type="button" value="delete"/>
+            <% } else { %>
+                <% if (completed) { %>
+                    <input type="checkbox" checked>
+                    <del><%= name %></del>
+                <% } else { %>
+                    <input type="checkbox">
+                    <%= name %>
+                <% } %>
+                </input>
+                <a class="edit-link" href="javascript:void(0);">[edit]</a>
+            <% } %>
+</script>
+  
+    
+}("javascripts/tasks/index/app")
+
+
