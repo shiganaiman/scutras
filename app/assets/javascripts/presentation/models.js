@@ -27,6 +27,10 @@
 	             }
 	         }
 	     });
+		
+		return {
+	         "Task": Task
+	     };
 	});
 }(myGlobalRequire));
 
