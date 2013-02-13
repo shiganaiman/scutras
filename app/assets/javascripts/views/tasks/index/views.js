@@ -1,7 +1,7 @@
 (function(r) {
 	requirejs.config(r);
 	// jquery、underscore、backbone、models に依存
-	define([ "jquery", "underscore", "backbone", "tasks/index/models" ], function($, _, backbone, models) {
+	define([ "jquery", "underscore", "backbone", "models/tasks" ], function($, _, backbone, models) {
 		var Task = models.Task;
 		var TaskList = models.TaskList;
 

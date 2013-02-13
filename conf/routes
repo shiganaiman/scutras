@@ -3,13 +3,17 @@
 # ~~~~
 
 # Home page
-GET     /                           controllers.Application.index
-GET     /presentations						controllers.Presentations.list
-GET     /presentations/$id<[0-9]+>			controllers.Presentations.index(id:Long)
-POST    /presentations						controllers.Presentations.create
-POST    /presentations/$id<[0-9]+>/delete	controllers.Presentations.delete(id:Long)
+GET     /									controllers.Application.index
 
-GET     /tasks/$id<[0-9]+>			controllers.Tasks.index(id:Long)
+#GET     /presentations/$id<[0-9]+>			controllers.Presentations.index(id:Long)
+
+GET     /tasks/$id<[0-9]+>					controllers.Tasks.index(id:Long)
+
+
+#admin
+GET     /admin/users						controllers.admin.Users.index
+GET     /admin/users/all					controllers.admin.Users.edit
+POST    /admin/users/all					controllers.admin.Users.update
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)

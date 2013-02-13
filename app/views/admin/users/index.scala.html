@@ -1,0 +1,104 @@
+@*
+<meta charset="UTF-8" />
+*@ @(message: String) @main("user") {
+
+<h1>User</h1>
+<div id="user-main">
+	<div id="user-edit"></div>
+
+	<div>
+		<button type="button" class="btn btn-primary" id="add-user">Add new user</button>
+		<table class="table table-condensed table-hover">
+			<thead>
+				<tr>
+					<th>action</th>
+					<th>Account</th>
+					<th>Name</th>
+					<th>Email</th>
+					<th>Status</th>
+				</tr>
+			</thead>
+			<tbody id="user-list">
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<!-- script -->
+<script id="user-view-template" " type="text/html">
+<div class="form-horizontal" >
+	<input type="hidden" id="input-id" value="<%= id %>" />
+	<input type="hidden" id="input-editMode" value="<%= editMode %>" />
+	<div class="control-group">
+		<label class="control-label" for="input-account">Account</label>
+		<div class="controls">
+			<input class="input-xlarge" type="text" id="input-account" placeholder="Account" value="<%= account %>" required/>
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label" for="input-name">Name</label>
+		<div class="controls">
+			<input class="input-xlarge" type="text" id="input-name" placeholder="Name" value="<%= name %>" required/>
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label" for="input-password">Password</label>
+		<div class="controls">
+			<input class="input-xlarge" type="password" id="input-password" placeholder="Password" value="<%= password %>" required/>
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label" for="input-email" required>Email</label>
+		<div class="controls">
+			<input class="input-xlarge"  type="email" id="input-email" placeholder="Email" value="<%= email %>" required/>
+		</div>
+	</div>
+</div>
+<div class="form-actions">
+	<button type="button" class="btn" id="cancel">Cancel</button>
+	<% if (editMode == scutras.em.EDIT_MODE.NEW){ %>
+		<button type="button" class="btn btn-primary" id="create">Create new user</button>
+	<% } %>
+	<% if (editMode != scutras.em.EDIT_MODE.NEW){ %>
+		<button type="button" class="btn btn-primary" id="update">Update changes</button>
+	<% } %>
+	<% if (editMode != scutras.em.EDIT_MODE.NEW){ %>
+		<button type="button" class="btn btn-danger" id="delete">Delete</button>
+	<% } %>
+</div>
+</script>
+
+<script id="user-list-tr-template" " type="text/html">
+<td>
+	<% if(isSelected){ %>
+		<button type="button" class="btn btn-info user-list-tr-edit">Edit</button>
+	<% }else{ %>
+		<button type="button" class="btn user-list-tr-edit">Edit</button>
+	<% } %>
+</td>
+<td><%= account %></td>
+<td><%= name %></td>
+<td><%= email %></td>
+<td><span class="label label-info"><%= editMode %></span></td>
+</script>
+
+<!-- Modal -->
+<div id="deleteModal" class="modal hide fade">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h3>Modal header</h3>
+  </div>
+  <div class="modal-body">
+    <p>One fine body…</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" id="deleteModel-cancel" class="btn">Cancel</button>
+    <button type="button" id="deleteModel-delete" class="btn btn-danger">Delete</button>
+  </div>
+</div>
+
+
+
+}("/javascripts/views/admin/users/index/app")
+
+
